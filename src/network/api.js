@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // 创建 axios 实例
 const api = axios.create({
-    baseURL: 'https://668cde0c099db4c579f0afbc.mockapi.io/api/v1', // 你的API基础URL
+    baseURL: 'https://api.itimes.me/server/index.php?g=Web&c=Mock&o=simple&projectID=3&uri=', // 你的API基础URL
     timeout: 10000, // 请求超时时间
     headers: {
         'Content-Type': 'application/json',
