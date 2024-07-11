@@ -1,19 +1,16 @@
 <template>
   <div id="app">
     <router-view></router-view>
-
-    <!-- <login-in class="login"></login-in> -->
   </div>
 </template>
 
 
 <script>
-import Login from './components/login.vue';
-
+import MemberLevel from './components/memberlevel.vue';
 export default {
   name: 'App',
   components: {
-    LoginIn: Login
+    MemberLevel: MemberLevel,
   },
 };
 </script>
@@ -25,7 +22,7 @@ html, body {
 }
 #app {
   /* 渐变色背景 */
-  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  background: white;
   /* 全屏 */
   height: 100vh;
   width: 100vw;

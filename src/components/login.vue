@@ -29,14 +29,7 @@ export default {
     };
   },
   methods: {
-    async login() {
-      try {
-        // 获取用户信息
-        const userInfo = await getUserInfo();
-        console.log('用户信息', userInfo);
-      } catch (error) {
-        console.error('登录失败', error);
-      }
+    login() {
     },
   },
 };

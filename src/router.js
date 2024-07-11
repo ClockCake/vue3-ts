@@ -1,19 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './components/home.vue'
-import Login from './components/login.vue' // 确保路径正确
+import MemberLevel from './components/memberlevel.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Login',
-    component: Login
+    name: 'MemberLevel',
+    component: MemberLevel
   },
-  {
-    path: '/home',
-    name: 'Home',
-    component: Home
-  },
-  // 你可以在这里添加更多的路由
 ]
 
 const router = createRouter({
