@@ -10,7 +10,7 @@ export const getUserInfo = async () => {
         const response = await api.get(`/getuser`);
         const apiResponse = ApiResponse.fromJson(response);
         if (apiResponse.code === 200) {
-            return apiResponse.data; // 这里的 data 已经是 UserModel 实例
+            return apiResponse.data; 
         } else {
             throw new Error(apiResponse.msg);
         }
