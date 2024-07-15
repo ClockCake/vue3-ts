@@ -2,7 +2,7 @@
     <div class="bgview">
         <img class="bgv" src="../assets/bgv.png" alt="">
         <div class="fullVStack">
-            <div class="infoStack">
+            <div id="infoStack">
                 <img class="avatar" :src="avatar" alt="">
                 <div class="nameVStack">
                     <div class="levelHStack">
@@ -133,7 +133,7 @@ body {
     position: relative; 
     z-index: 1; 
 }
-.infoStack {
+#infoStack {
     display: flex;
     margin-top: v-bind('px2rem(64)');
     flex-direction: row;
