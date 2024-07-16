@@ -114,8 +114,8 @@ body {
     background-color: black;
 }
 .bgview {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     background: linear-gradient(180deg, #312925 30%, #191815 70%);
 }
