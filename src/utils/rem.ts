@@ -1,15 +1,22 @@
 // src/utils/rem.ts
 
-// 基准字体大小
-const baseSize = 16;
+const designWidth = 375; // iPhone 设计稿宽度
+const designHeight = 812; // iPhone 设计稿高度
 
-// 设置 rem 函数
+// pt 到 px 的转换比例 (1pt = 1.33333px)
+const ptToPxRatio = 4 / 3;
+
 export function setRem() {
-    const scale = document.documentElement.clientWidth / 375;
-    document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px';
+  const scale = Math.min(window.innerWidth / designWidth, window.innerHeight / designHeight);
+  
+  // 设置根元素字体大小, 这里我们用 100 作为基准
+  document.documentElement.style.fontSize = scale * 100 + 'px';
 }
 
-// 转换 px 到 rem
-export function px2rem(px: number): string {
-    return `${px / baseSize}rem`;
+
+
+// 将 pt 转换为 rem
+export function ptToRem(pt: number): string {
+  const px = pt * ptToPxRatio;
+  return (px / 100).toFixed(4) + 'rem';
 }

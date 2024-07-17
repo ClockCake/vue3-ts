@@ -34,12 +34,12 @@
 
 
 <script lang="ts">
-import { px2rem } from '../utils/rem'
+import { ptToRem } from '../utils/rem'
 
 export default {
     name: 'MemberLevel',
     setup() {
-     return { px2rem }
+     return { ptToRem }
     },
     data() {
         return {
@@ -135,27 +135,27 @@ body {
 }
 #infoStack {
     display: flex;
-    margin-top: v-bind('px2rem(64)');
+    margin-top: v-bind('ptToRem(64)');
     flex-direction: row;
     justify-content: flex-start;
-    top: v-bind('px2rem(72)');
+    top: v-bind('ptToRem(72)');
     width: 100%;
-    padding-right: v-bind('px2rem(20)'); /* 添加右边距 */
+    padding-right: v-bind('ptToRem(20)'); /* 添加右边距 */
     box-sizing: border-box; /* 确保padding不会增加总宽度 */
 
 }
 .avatar {
-    width: v-bind('px2rem(54)');
-    height: v-bind('px2rem(54)');
+    width: v-bind('ptToRem(54)');
+    height: v-bind('ptToRem(54)');
     border-radius: 50%;
-    margin-left: v-bind('px2rem(20)');
+    margin-left: v-bind('ptToRem(20)');
 }
 .nameVStack {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: v-bind('px2rem(20)');
-    width: calc(100% - v-bind('px2rem(94)')); /* 减去头像宽度和边距 */
+    margin-left: v-bind('ptToRem(20)');
+    width: calc(100% - v-bind('ptToRem(94)')); /* 减去头像宽度和边距 */
 
 }
 .levelHStack {
@@ -169,37 +169,37 @@ body {
     font: normal normal 15px/18px PingFang SC;
 }
 #level {
-    width: v-bind('px2rem(50)');
-    height: v-bind('px2rem(20)');
-    margin-left: v-bind('px2rem(10)');
+    width: v-bind('ptToRem(50)');
+    height: v-bind('ptToRem(20)');
+    margin-left: v-bind('ptToRem(10)');
 }
 progress {
     width: 100%;
-    height: v-bind('px2rem(5)');
-    border-radius: v-bind('px2rem(2.5)');
+    height: v-bind('ptToRem(5)');
+    border-radius: v-bind('ptToRem(2.5)');
     background-color: #66625C;
 
 }
 /* 填充色（进度条颜色） */
 progress::-webkit-progress-value {
     background-color: #FACEA3; /* 设置您想要的填充颜色 */
-    border-radius: v-bind('px2rem(2.5)');
+    border-radius: v-bind('ptToRem(2.5)');
 }
 .desc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: v-bind('px2rem(10)');
+    margin-top: v-bind('ptToRem(10)');
     color: white;
     font: normal normal 12px/14px PingFang SC;
 }
 
 .memberPrivileges {
-    margin-top: v-bind('px2rem(30)');
-    padding: v-bind('px2rem(20)');
+    margin-top: v-bind('ptToRem(30)');
+    padding: v-bind('ptToRem(20)');
     overflow-y: auto; /* 启用垂直滚动 */
     background-color: white;
-    border-radius: v-bind('px2rem(20)') v-bind('px2rem(20)') 0 0;
+    border-radius: v-bind('ptToRem(20)') v-bind('ptToRem(20)') 0 0;
     flex: 1; /* 让它占据 fullVStack 中的剩余空间 */
     display: flex;
     flex-direction: column;
@@ -208,14 +208,14 @@ progress::-webkit-progress-value {
 .memberPrivileges h2 {
     color: #FACEA3;
     text-align: center;
-    font-size: v-bind('px2rem(18)');
-    margin-bottom: v-bind('px2rem(20)');
+    font-size: v-bind('ptToRem(18)');
+    margin-bottom: v-bind('ptToRem(20)');
 }
 
 .privilegesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: v-bind('px2rem(20)');
+    gap: v-bind('ptToRem(20)');
 }
 
 .privilegeItem {
@@ -224,19 +224,19 @@ progress::-webkit-progress-value {
 }
 
 .privilegeItem img {
-    width: v-bind('px2rem(83)');
-    height: v-bind('px2rem(83)');
+    width: v-bind('ptToRem(83)');
+    height: v-bind('ptToRem(83)');
 }
 
 .privilegeItem h3 {
     color: #333333 100%;
-    font-size: v-bind('px2rem(12)');
+    font-size: v-bind('ptToRem(12)');
     font-bold: bold;
-    margin-bottom: v-bind('px2rem(5)');
+    margin-bottom: v-bind('ptToRem(5)');
 }
 
 .privilegeItem p {
     color: #999999;
-    font-size: v-bind('px2rem(10)');
+    font-size: v-bind('ptToRem(10)');
 }
 </style>
