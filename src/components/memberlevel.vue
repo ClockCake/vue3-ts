@@ -9,9 +9,8 @@
                         <span id="name">{{ name }}</span>
                         <img id="level" src="../assets/level.png" alt="">
                     </div>
-                    <div>
-                        <progress :value="progress" max="1"></progress>                    
-                    </div>
+                    <progress :value="progress" max="1"></progress>                    
+
                     <div class="desc">
                         <span>{{ desc }}</span>
                         <span>V.2</span>
@@ -138,7 +137,6 @@ body {
     margin-top: v-bind('ptToRem(64)');
     flex-direction: row;
     justify-content: flex-start;
-    top: v-bind('ptToRem(72)');
     width: 100%;
     padding-right: v-bind('ptToRem(20)'); /* 添加右边距 */
     box-sizing: border-box; /* 确保padding不会增加总宽度 */
@@ -162,12 +160,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center; /* 添加这一行 */
+
 }
 #name{
     color: white;
     /* 中粗体 15pt */
-    font: normal normal 15px/18px PingFang SC;
+    font: v-bind('ptToRem(12)') regular;
+
 }
+
 #level {
     width: v-bind('ptToRem(50)');
     height: v-bind('ptToRem(20)');
@@ -175,9 +177,10 @@ body {
 }
 progress {
     width: 100%;
-    height: v-bind('ptToRem(5)');
+    height: v-bind('ptToRem(3)');
     border-radius: v-bind('ptToRem(2.5)');
     background-color: #66625C;
+    margin-top: v-bind('ptToRem(10)');
 
 }
 /* 填充色（进度条颜色） */
@@ -189,14 +192,14 @@ progress::-webkit-progress-value {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: v-bind('ptToRem(10)');
+    margin-top: v-bind('ptToRem(5)');
     color: white;
     font: normal normal 12px/14px PingFang SC;
 }
 
 .memberPrivileges {
     margin-top: v-bind('ptToRem(30)');
-    padding: v-bind('ptToRem(20)');
+    /* padding: v-bind('ptToRem(20)'); */
     overflow-y: auto; /* 启用垂直滚动 */
     background-color: white;
     border-radius: v-bind('ptToRem(20)') v-bind('ptToRem(20)') 0 0;
@@ -208,31 +211,42 @@ progress::-webkit-progress-value {
 .memberPrivileges h2 {
     color: #FACEA3;
     text-align: center;
-    font-size: v-bind('ptToRem(18)');
+    font-size: v-bind('ptToRem(16)');
     margin-bottom: v-bind('ptToRem(20)');
 }
 
 .privilegesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: v-bind('ptToRem(20)');
+    gap: v-bind('ptToRem(10)');
 }
 
 .privilegeItem {
-    background-color: rgba(255, 255, 255, 0.1);
-    text-align: center;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: v-bind('ptToRem(130)'); /* 根据需要调整 */
+
 }
 
 .privilegeItem img {
-    width: v-bind('ptToRem(83)');
-    height: v-bind('ptToRem(83)');
+    width: v-bind('ptToRem(70)');
+    height: v-bind('ptToRem(70)');
 }
 
+
+.privilegeItem h3,
+.privilegeItem p {
+    margin: 0;
+    padding: 0;
+}
 .privilegeItem h3 {
     color: #333333 100%;
-    font-size: v-bind('ptToRem(12)');
-    font-bold: bold;
-    margin-bottom: v-bind('ptToRem(5)');
+    font-size: v-bind('ptToRem(13)');
+    font-weight: bold;
+    margin-top: v-bind('ptToRem(10)');
 }
 
 .privilegeItem p {

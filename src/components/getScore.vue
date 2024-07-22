@@ -121,7 +121,9 @@ export default {
 .image-container {
   position: relative;
   width: 100%;
-  height: 60vh
+  height: 60vh;
+  overflow: visible; /* 允许内容溢出 */
+
 }
 
 .background-image{
@@ -140,6 +142,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
+  /* padding-top: v-bind('ptToRem(40)');  */
 
 
 }
@@ -148,6 +151,7 @@ export default {
     top: v-bind('ptToRem(72)');
     margin-left: v-bind('ptToRem(66)');
     margin-right: v-bind('ptToRem(66)');
+
 }
 
 .redPocketContainer {
@@ -155,6 +159,7 @@ export default {
   top: v-bind('ptToRem(92)');
   margin-left: v-bind('ptToRem(16)');
   margin-right: v-bind('ptToRem(16)');
+
 }
 
 .redPocketBV {
